@@ -15,8 +15,11 @@
 </ul>
 <script type="text/javascript">
     $(document).ready(function() {
-        $("#theList").append("<li>Here's 3</li>", "<li>Here's 4</li>",
-          "<li>Here's 3</li>");
+        $("#theList").append("<li>Here's 3</li>");
+        $("#theList li").each(function() {
+            var existingText=$(this).text().substr(7,1);
+            $(this).text("Item "+existingText);
+        })
     });
 </script>
 </body>
