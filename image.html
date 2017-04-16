@@ -11,8 +11,12 @@
 <h1>Attributes</h1>
 <img alt="square" id="theImage" src="square.jpg"/>
 <script type="text/javascript">
+    function changeImage() {
+       $("#theImage").attr("src","heart.jpg");
+       $("#theImage").attr("alt","heart");
+    }
     $(document).ready(function() {
-        $("#theImage").attr("src","heart.jpg");
+        setTimeout(changeImage,2000);
     });
 </script>
 </body>
